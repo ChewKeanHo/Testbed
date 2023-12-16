@@ -3,21 +3,21 @@ class AutomataCI < Formula
   homepage "https://your-product.website.here"
   license "Apache-2.0"
   url "https://github.com/ChewKeanHo/AutomataCI/releases/download/1.7.0/automataci-homebrew_1.7.0_any-any.tar.xz"
-  sha256 "10523db4fa99e129913505d9ca807a870c25370d5dabdd12af88e7638fa17836"
+  sha256 "b5c016b00b14aefe876788f9102431c387a45b504ee540fb9602acfc05b3f5f6"
 
 
   def install
-    system "./ci.cmd setup"
-    system "./ci.cmd prepare"
-    system "./ci.cmd materialize"
+    system "./automataCI/ci.sh.ps1 setup"
+    system "./automataCI/ci.sh.ps1 prepare"
+    system "./automataCI/ci.sh.ps1 materialize"
     chmod 0755, "bin/automataci"
     bin.install "bin/automataci"
   end
 
   test do
-    system "./ci.cmd setup"
-    system "./ci.cmd prepare"
-    system "./ci.cmd materialize"
+    system "./automataCI/ci.sh.ps1 setup"
+    system "./automataCI/ci.sh.ps1 prepare"
+    system "./automataCI/ci.sh.ps1 materialize"
     assert_predicate ./bin/automataci, :exist?
   end
 end
