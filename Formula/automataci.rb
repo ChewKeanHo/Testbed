@@ -3,7 +3,7 @@ class AutomataCI < Formula
   homepage "https://your-product.website.here"
   license "Apache-2.0"
   url "https://github.com/ChewKeanHo/AutomataCI/releases/download/1.7.0/automataci-homebrew_1.7.0_any-any.tar.xz"
-  sha256 "864e63f8d0a43e9e5084ba2314cdcfdd85603a43a531b36fdb1971d6d5f503b5"
+  sha256 "0cefd13be119b6eaeb11ff48b79dbd9dd05c1e09d2f3c2d84fc23dced8ef77a9"
 
 
   def install
